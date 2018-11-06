@@ -3,7 +3,7 @@ services:
    - docker
 
 before_install:
-   - docker build -t sheshar/react-test -f ./client/Dockerfile.dev ./cient/Docker
+   - docker build -t sheshar/react-test -f ./client/Dockerfile.dev ./client/Docker
 
 script:
    - docker run sheshar/react-test npm test -- --coverage
