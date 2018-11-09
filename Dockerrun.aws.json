@@ -6,21 +6,36 @@
       "image": "sheshar/multi-client",
       "hostname": "client",
       "essential": false,
-      "memory": 128
+      "memory": 512
+      "command": [
+         "tail",
+         "-f",
+         "/bin/bash"
+         ]
     },
     {
       "name": "server",
       "image": "sheshar/multi-server",
       "hostname": "api",
       "essential": false,
-      "memory": 128
+      "memory": 512
+      "command": [
+         "tail",
+         "-f",
+         "/bin/bash"
+         ]
     },
     {
       "name": "worker",
       "image": "sheshar/multi-worker",
       "hostname": "worker",
       "essential": false,
-      "memory": 128
+      "memory": 512
+      "command": [
+         "tail",
+         "-f",
+         "/bin/bash"
+         ]
     },
     {
       "name": "nginx",
@@ -34,7 +49,12 @@
         }
       ],
       "links": ["client", "server"],
-      "memory": 128
+      "memory": 512
+      "command": [
+         "tail",
+         "-f",
+         "/bin/bash"
+         ]
     }
   ]
 } 
