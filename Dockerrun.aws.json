@@ -6,7 +6,7 @@
       "image": "sheshar/multi-client",
       "hostname": "client",
       "essential": false,
-      "memory": 512
+      "memory": 512,
       "command": [
          "tail",
          "-f",
@@ -18,7 +18,7 @@
       "image": "sheshar/multi-server",
       "hostname": "api",
       "essential": false,
-      "memory": 512
+      "memory": 512,
       "command": [
          "tail",
          "-f",
@@ -30,7 +30,7 @@
       "image": "sheshar/multi-worker",
       "hostname": "worker",
       "essential": false,
-      "memory": 512
+      "memory": 512,
       "command": [
          "tail",
          "-f",
@@ -49,7 +49,7 @@
         }
       ],
       "links": ["client", "server"],
-      "memory": 512
+      "memory": 512,
       "command": [
          "tail",
          "-f",
